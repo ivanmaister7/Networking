@@ -10,6 +10,9 @@
 		AF1BC2B62858BF3300660E52 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1BC2AC2858BF3300660E52 /* Networking.framework */; };
 		AF1BC2BB2858BF3300660E52 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BC2BA2858BF3300660E52 /* NetworkingTests.swift */; };
 		AF1BC2BD2858BF3300660E52 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = AF1BC2AF2858BF3300660E52 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF1BC2C82858C0CA00660E52 /* AnimalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BC2C62858C0C900660E52 /* AnimalService.swift */; };
+		AF1BC2C92858C0CA00660E52 /* CatPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BC2C72858C0CA00660E52 /* CatPost.swift */; };
+		AF1BC2D82858C3AF00660E52 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BC2D72858C3AF00660E52 /* AsyncImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		AF1BC2B52858BF3300660E52 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF1BC2BA2858BF3300660E52 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		AF1BC2BC2858BF3300660E52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF1BC2C62858C0C900660E52 /* AnimalService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalService.swift; sourceTree = "<group>"; };
+		AF1BC2C72858C0CA00660E52 /* CatPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatPost.swift; sourceTree = "<group>"; };
+		AF1BC2D72858C3AF00660E52 /* AsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,9 @@
 		AF1BC2AE2858BF3300660E52 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				AF1BC2C72858C0CA00660E52 /* CatPost.swift */,
+				AF1BC2D72858C3AF00660E52 /* AsyncImage.swift */,
+				AF1BC2C62858C0C900660E52 /* AnimalService.swift */,
 				AF1BC2AF2858BF3300660E52 /* Networking.h */,
 				AF1BC2B02858BF3300660E52 /* Info.plist */,
 			);
@@ -147,6 +156,7 @@
 				TargetAttributes = {
 					AF1BC2AB2858BF3300660E52 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					AF1BC2B42858BF3300660E52 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -194,6 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF1BC2C92858C0CA00660E52 /* CatPost.swift in Sources */,
+				AF1BC2D82858C3AF00660E52 /* AsyncImage.swift in Sources */,
+				AF1BC2C82858C0CA00660E52 /* AnimalService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +354,9 @@
 		AF1BC2C12858BF3300660E52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = VNU8KKW4GG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -349,6 +364,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,7 +372,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ua.edu.ukma.maister.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,7 +384,9 @@
 		AF1BC2C22858BF3300660E52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = VNU8KKW4GG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -373,6 +394,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +402,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ua.edu.ukma.maister.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -389,6 +413,7 @@
 		AF1BC2C42858BF3300660E52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VNU8KKW4GG;
 				INFOPLIST_FILE = NetworkingTests/Info.plist;
@@ -407,6 +432,7 @@
 		AF1BC2C52858BF3300660E52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VNU8KKW4GG;
 				INFOPLIST_FILE = NetworkingTests/Info.plist;

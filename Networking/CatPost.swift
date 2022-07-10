@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CatPost: Identifiable, Codable{
-    let id: String
-    let url: String
+public struct CatPost: Identifiable, Codable{
+    public let id: String
+    public let url: String
 }
